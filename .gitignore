@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+env/
+.env
+output/*
+!output/.gitkeep
+*.mp4
+*.avi
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
