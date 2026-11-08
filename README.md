@@ -2,7 +2,7 @@
 
 A Python computer-vision project that detects human faces in **images, video files and a live webcam feed** using OpenCV's Haar cascade classifier. It includes a command-line interface, a privacy **blur mode**, and automated tests.
 
-**[▶ Try the live demo](LIVE_DEMO_URL)** – upload a photo or use your camera, no install needed.
+**[▶ Try the live demo](https://face-detection-opencv-demo.streamlit.app/)** – upload a photo or use your camera, no install needed.
 
 | Boxes mode | Privacy blur mode |
 |---|---|
