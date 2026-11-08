@@ -2,6 +2,8 @@
 
 A Python computer-vision project that detects human faces in **images, video files and a live webcam feed** using OpenCV's Haar cascade classifier. It includes a command-line interface, a privacy **blur mode**, and automated tests.
 
+**[▶ Try the live demo](LIVE_DEMO_URL)** – upload a photo or use your camera, no install needed.
+
 | Boxes mode | Privacy blur mode |
 |---|---|
 | ![Detection](assets/demo_boxes.jpg) | ![Blur](assets/demo_blur.jpg) |
@@ -17,7 +19,8 @@ A Python computer-vision project that detects human faces in **images, video fil
 - **Privacy blur mode** – blur every detected face instead of drawing boxes (`--blur`).
 - **Tunable detection** – adjust scale factor, minimum neighbours and minimum face size from the command line.
 - **Input validation and clear errors** – bad paths or unreadable files return a helpful message, not a crash.
-- **Automated tests** – 11 unit tests covering the detector, drawing/blur helpers and the CLI.
+- **Web demo** – Streamlit app with photo upload, camera input, adjustable settings and result download (`web/app.py`).
+- **Automated tests** – 13 tests covering the detector, drawing/blur helpers, the CLI and the web app.
 
 ## Tech Stack
 
@@ -65,6 +68,15 @@ Results are saved in the `output/` folder (or use `-o path` to choose).
 | `-o, --output` | Output file path (image and video) | `output/` |
 | `--camera` | Camera index (webcam mode) | 0 |
 
+## Run the web demo locally
+
+```bash
+pip install -r web/requirements.txt
+streamlit run web/app.py
+```
+
+![Web demo](assets/web_demo.jpg)
+
 ## Run the tests
 
 ```bash
@@ -79,6 +91,7 @@ face-detection-opencv/
 │   ├── detector.py     # FaceDetector class: detect, draw, blur
 │   ├── cli.py          # image / video / webcam commands
 │   └── __main__.py     # enables: python -m face_detector
+├── web/                # Streamlit demo (app.py, requirements.txt)
 ├── tests/              # unit tests
 ├── samples/            # sample image
 ├── assets/             # README screenshots
